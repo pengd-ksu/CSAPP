@@ -1,0 +1,52 @@
+(gdb) break explode_bomb
+Breakpoint 1 at 0x40143a
+(gdb) break phase_1
+Breakpoint 2 at 0x400ee0
+(gdb) break phase_2
+Breakpoint 3 at 0x400efc
+(gdb) break phase_3
+Breakpoint 4 at 0x400f43
+(gdb) break phase_4
+Breakpoint 5 at 0x40100c
+(gdb) break phase_5
+Breakpoint 6 at 0x401062
+(gdb) break phase_6
+Breakpoint 7 at 0x4010f4
+(gdb) set args ./sol.txt
+(gdb) show args
+Argument list to give program being debugged when it is started is "./sol.txt".
+(gdb) run
+Starting program: /home/tigergraph/product/back/bomb ./sol.txt
+Welcome to my fiendish little bomb. You have 6 phases with
+which to blow yourself up. Have a nice day!
+
+Breakpoint 2, 0x0000000000400ee0 in phase_1 ()
+(gdb) c
+Continuing.
+Phase 1 defused. How about the next one?
+
+Breakpoint 3, 0x0000000000400efc in phase_2 ()
+(gdb) c
+Continuing.
+That's number 2.  Keep going!
+
+Breakpoint 4, 0x0000000000400f43 in phase_3 ()
+(gdb) c
+Continuing.
+Halfway there!
+
+Breakpoint 5, 0x000000000040100c in phase_4 ()
+(gdb) c
+Continuing.
+So you got that one.  Try this one.
+
+Breakpoint 6, 0x0000000000401062 in phase_5 ()
+(gdb) c
+Continuing.
+Good work!  On to the next...
+
+Breakpoint 7, 0x00000000004010f4 in phase_6 ()
+(gdb) c
+Continuing.
+Congratulations! You've defused the bomb!
+[Inferior 1 (process 38155) exited normally]
